@@ -178,15 +178,19 @@ details[open] > summary::after {
       width: 120%; /* responsive scaling */
       height: auto;
       margin-left: -3.9rem;
-      
+      z-index: 1;
   }
 
   .image-section .pattern-desktop {
-      position: absolute;
-      
-    top: 0;
-    left: 0;
-  }
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    width: 50%;
+    height: auto;
+    margin-top: 1rem;
+}
 
   .image-section .pattern-mobile {
     display: none;

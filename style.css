@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400, 700;
+    /*color: hsl(240, 5%, 91%);*/
+   min-height: 100vh;
+    padding-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    background: linear-gradient(
+        135deg,
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    )
+}
+
+.card {
+   background-color: white;
+   color: hsl(240, 6%, 50%);
+   width: 375px;
+   padding-left: 1.5rem;
+   border-radius: 1rem;
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 1rem;
+   -ms-border-radius: 1rem;
+   -o-border-radius: 1rem;
+   position: relative;
+   padding-top: 8rem;
+     padding-left: 1.5rem;
+    .card {
+  padding-bottom: 2.9rem; /* or even 3.5rem */
+}
+
+
+}
+
+.image-section .woman {
+    position: absolute;
+    margin-top: -8.5rem;
+    margin-left: 5rem;
+}
+
+.image-section .pattern-mobile {
+    position: absolute;
+    margin-top: -3.5rem;
+    margin-left: 4.3rem;
+}
+.image-section .pattern-destop {
+    position: absolute;
+    margin-top: -3.5rem;
+    margin-left: 4.3rem;
+}
+
+.faq-section > h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+details {
+  border-bottom: 1px solid hsl(240, 5%, 91%)
+;
+  padding: 1rem 0;
+}
+
+details > summary {
+    color: hsl(237, 12%, 33%);
+}
+
+details > p {
+    color: hsl(240, 6%, 50%);
+}
+
+details[open] summary {
+    font-weight: 700;
+    color: black;
+}
+
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details p {
+  margin-top: 0.8rem;
+  color: hsl(240, 6%, 50%);
+  line-height: 1.6;
+}
+
+
+
+summary::after {
+  content: "";
+  background-image: url("./faq-accordion-card-main/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
+  /*Customarrowforopenstate*//*Alternatively,youcanrotatetheexistingarrow:;
+  *//*transform: rotate(90deg);
+  */color: hsl(14, 88%, 65%);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.faq-details {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+
+@media (min-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+    }
+  .card {
+      width: 110%;
+      display: flex;
+      flex-direction: row; /* side by side */
+      padding: 2rem;
+      gap: 2rem; /* space between child sections */
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin: 0 auto;
+      
+  }
+
+  .image-section, .text-section {
+       flex: 1; /* equal width for both */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertically center content */
+      align-items: center; /* center content horizontally if needed */
+      position: relative; /* keep child positioning relative for patterns if needed */
+  }
+
+  .image-section .woman {
+     position: relative; 
+      margin: 0 auto; /* center it */
+      width: 120%; /* responsive scaling */
+      height: auto;
+      margin-left: -3.9rem;
+      
+  }
+
+  .image-section .pattern-desktop {
+      position: absolute;
+      
+    top: 0;
+    left: 0;
+  }
+
+  .image-section .pattern-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) {
+    .image-section .pattern-desktop {
+        display: none;
+    }
+}

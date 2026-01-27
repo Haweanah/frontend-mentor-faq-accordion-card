@@ -77,7 +77,7 @@ details summary::after {
     width: 10px;
     height: 7px;
     flex-shrink: 0;
-    background: url("./faq-accordion-card-main/images/icon-arrow-down.svg") no-repeat center / contain;
+    background: url("/faq-accordion-card-main/images/icon-arrow-down.svg") no-repeat center / contain;
     color: hsl(14, 88%, 65%);
     font-size: 1rem;
     

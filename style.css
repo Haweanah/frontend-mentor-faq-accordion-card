@@ -5,200 +5,222 @@
 }
 
 
+html, body {
+    height: 100%;
+}
 
 body {
-    font-family: "Kumbh Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 400, 700;
-    /*color: hsl(240, 5%, 91%);*/
-   min-height: 100vh;
-    padding-top: 4.3rem;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    
-    background: linear-gradient(
-        135deg,
-        hsl(273, 75%, 66%),
-        hsl(240, 73%, 65%)
-    )
-}
-
-.card {
-   background-color: white;
-   color: hsl(240, 6%, 50%);
-   width: 375px;
-   padding-left: 1.5rem;
-   border-radius: 1rem;
-   -webkit-border-radius: 1rem;
-   -moz-border-radius: 1rem;
-   -ms-border-radius: 1rem;
-   -o-border-radius: 1rem;
-   position: relative;
-   padding-top: 8rem;
-     padding-left: 1.5rem;
-    .card {
-  padding-bottom: 2.9rem; /* or even 3.5rem */
-}
-
-
-}
-
-.image-section .woman {
-    position: absolute;
-    margin-top: -8.5rem;
-    margin-left: 5rem;
-}
-
-.image-section .pattern-mobile {
-    position: absolute;
-    margin-top: -3.5rem;
-    margin-left: 4.3rem;
-}
-.image-section .pattern-destop {
-    position: absolute;
-    margin-top: -3.5rem;
-    margin-left: 4.3rem;
-}
-
-.faq-section > h1 {
-    display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    align-items: center;
+    padding:3rem 2rem 1rem;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12px;
+}
+
+main .card {
+    background-color: whitesmoke;
+    width: 100%;
+    max-width: 375px;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: hsl(238, 29%, 16%);
+    margin: 0 0 1rem;
+    position: relative;
+}
+
+.faq-section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
 }
 
 details {
-  border-bottom: 1px solid hsl(240, 5%, 91%)
-;
-  padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 0.8rem;
+    gap: 0.5rem;
+    border-bottom: solid 1px hsl(240, 5%, 91%);
 }
 
-details > summary {
+details summary {
+    width: 100%;
     color: hsl(237, 12%, 33%);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    cursor: pointer;
+    list-style: none;
+    
+    font-weight: 400;
+    align-items: center;
+
+    }
+
+    .summary-text {
+        min-width: 0;
+    }
+summary::-webkit-details-marker {
+    display: none;
 }
 
-details > p {
-    color: hsl(240, 6%, 50%);
+details summary::after {
+    content:"" ;
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    flex-shrink: 0;
+    background: url("./faq-accordion-card-main/images/icon-arrow-down.svg") no-repeat center / contain;
+    color: hsl(14, 88%, 65%);
+    font-size: 1rem;
+    
 }
 
 details[open] summary {
     font-weight: 700;
-    color: black;
 }
 
-
-summary {
-  list-style: none;
-  cursor: pointer;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-summary::-webkit-details-marker {
-  display: none;
+details[open] summary::after {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
 details p {
-  margin-top: 0.8rem;
-  color: hsl(240, 6%, 50%);
-  line-height: 1.6;
+    color: hsl(240, 6%, 50%);
 }
 
 
 
-summary::after {
-  content: "";
-  background-image: url("./faq-accordion-card-main/images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  position: absolute;
-  right: 1rem;
-  transition: transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  -moz-transition: transform 0.2s;
-  -ms-transition: transform 0.2s;
-  -o-transition: transform 0.2s;
+.woman {
+    width: 100%;
+    max-width: 198px;
+    height: auto;
+    position: absolute;
+    top: -5.5rem;
+    left: 3rem;
 }
 
-details[open] > summary::after {
-  transform: rotate(180deg);
-  /*Customarrowforopenstate*//*Alternatively,youcanrotatetheexistingarrow:;
-  *//*transform: rotate(90deg);
-  */color: hsl(14, 88%, 65%);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
+.pattern-mobile {
+    width: 75%;
+    max-width: 240px;
+    position: relative;
+    top: -1rem;
+    left: 2rem;
+}
+.woman-desktop {
+    display: none;
+    
 }
 
-.faq-details {
-    border-bottom: 1px solid hsl(240, 5%, 91%);
+.pattern-desktop {
+    display: none;
 }
+
+.illustration-box {
+    display: none;
+}
+summary {
+    list-style-type: none;
+}
+
 
 
 @media (min-width: 1024px) {
-    main {
+
+    body {
+        width: 100vw;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 6rem;
+        flex-direction: column;
     }
-  .card {
-      width: 110%;
-      display: flex;
-      flex-direction: row; /* side by side */
-      padding: 2rem;
-      gap: 2rem; /* space between child sections */
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin: 0 auto;
-      
-  }
 
-  .image-section, .text-section {
-       flex: 1; /* equal width for both */
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* vertically center content */
-      align-items: center; /* center content horizontally if needed */
-      position: relative; /* keep child positioning relative for patterns if needed */
-  }
+   main .card {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        height: 100%;
+        max-height: 700px;
+        position: relative;
+        padding: 4rem 4rem 4rem 28rem;
+    }
 
-  .image-section .woman {
-     position: relative; 
-      margin: 0 auto; /* center it */
-      width: 120%; /* responsive scaling */
-      height: auto;
-      margin-left: -3.9rem;
-      z-index: 1;
-  }
+    .faq-section h1 {
+        display: flex;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
 
-  .image-section .pattern-desktop {
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    width: 50%;
-    height: auto;
-    margin-top: 1rem;
-}
-
-  .image-section .pattern-mobile {
-    display: none;
-  }
-}
-
-@media (min-width: 320px) {
-    .image-section .pattern-desktop {
+    .woman {
         display: none;
     }
+
+    .pattern-mobile {
+        display: none;
+    }
+
+    .image-section {
+  position: absolute;
+  left: -80px;
+  /*moveoutsidecard*/top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+    .woman-desktop {
+        display: block;
+        max-width: 472px;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -1.5rem;
+        z-index: 2;
+        mask-image: linear-gradient(to right, transparent, black 25%);
+        
+    }
+
+    .pattern-desktop {
+        display: block;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        max-width: 966px;
+        height: auto;
+        top: -3rem;
+        mask-image: none;
+           }
+
+    .illustration-box {
+        display: block;
+        position: absolute;
+        bottom: 8px;
+        /*sitsontheplatform*/left: -18px;
+        /*adjustvisually*/width: 32px;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        max-width: 191px;
+        max-height: 184px;
+        transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+}
+
+.attribution {
+    padding: 1rem;
+}
 }

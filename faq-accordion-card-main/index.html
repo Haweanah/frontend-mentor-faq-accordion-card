@@ -1,100 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ===== Basic Meta ===== -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Accordion Card</title>
 
-  <!-- ===== SEO Meta ===== -->
-  <meta name="description" content="FAQ Accordion Card challenge by Frontend Mentor">
-  <meta name="author" content="Hauwa Abdulkadir">
 
-  <!-- ===== Title ===== -->
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- ===== Favicon ===== -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <!-- ===== Google Fonts ===== -->
+  <link rel="stylesheet" href="/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- ===== Main CSS ===== -->
-  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <main class="container">
-    <article class="card">
 
-      <!-- Image Section -->
-      <div class="image-section">
-        <img
-          class="woman"
-          src="./images/illustration-woman-online-mobile.svg"
-          alt="Illustration of a woman using an online platform"
-          width="198px"
-          height="150px"
+<main>
+  <article class="card">
 
-        >
+    <div class="image-section">
+      <img src="./images/illustration-woman-online-mobile.svg" 
+           alt="Woman illustration"
+           class="woman">
 
-        <img 
-        class="pattern-mobile"
-        src="./images/bg-pattern-mobile.svg" alt="bg pattern">
-        <img 
-        class="pattern-desktop"
-        src="./images/bg-pattern-desktop.svg" alt="bg pattern">
-        
-      </div>
+      <img src="./images/bg-pattern-mobile.svg"
+           alt=""
+           class="pattern-mobile">
 
-      <!-- FAQ Section -->
-      <div class="faq-section">
-        <h1>FAQ</h1>
+      <img src="./images/illustration-woman-online-desktop.svg"
+     alt=""
+     class="woman-desktop">
+     <img src="./images/illustration-box-desktop.svg" alt=""
+     class="illustration-box">
 
-        <details class="faq-details">
-          <summary>How many team members can I invite?</summary>
-          <p>You can invite up to 2 additional users on the Free plan.</p>
-        </details>
+<img src="./images/bg-pattern-desktop.svg"
+     alt=""
+     class="pattern-desktop">
+    
+    </div>
 
-        <details open>
-          <summary>What is the maximum file upload size?</summary>
-          <p>
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </p>
-        </details>
+    <section class="faq-section">
+      <h1>FAQ</h1>
 
-        <details class="faq-details">
-          <summary>How do I reset my password?</summary>
-          <p>
-            Click “Forgot password” from the login page or contact support for help.
-          </p>
-        </details>
+      <details>
+        <summary><span class="summary-text">How many team members can I invite?</span></summary>
+        <p>You can invite up to 2 additional users on the Free plan.</p>
+      </details>
 
-        <details class="faq-details">
-          <summary>Can I cancel my subscription?</summary>
-          <p>
-            Yes, you can cancel your subscription at any time from your account
-            settings.
-          </p>
-        </details>
+      <details open>
+        <summary><span class="summary-text">What is the maximum file upload size?</span></summary>
+        <p>No more than 2GB. All files must fit your allotted storage space.</p>
+      </details>
 
-        <details class="faq-details">
-          <summary>Do you provide additional support?</summary>
-          <p>
-            Yes! Email and live chat support are available 24/7.
-          </p>
-        </details>
-      </div>
-    </article>
-  </main>
+      <details>
+        <summary><span class="summary-text">How do I reset my password?</summary>
+        <p>Cl</span>ick “Forgot password” from the login page.</p>
+      </details>
 
-  <!-- Attribution -->
+      <details>
+        <summary><span class="summary-text">Can I cancel my subscription?</summary>
+        <p>Ye</span>s! Send us a message and we’ll process it.</p>
+      </details>
+
+      <details>
+        <summary><span class="summary-text">Do you provide additional support?</span></summary>
+        <p>Chat and email support is available 24/7.</p>
+      </details>
+
+    </section>
+
+  </article>
+</main>
+ <!-- Attribution -->
   <footer class="attribution">
     <p>
       Challenge by
@@ -107,8 +82,5 @@
       </a>.
     </p>
   </footer>
-
-  <!-- JavaScript -->
-  <script src="./script.js"></script>
 </body>
 </html>

@@ -30,6 +30,11 @@ main .card {
     color: hsl(238, 29%, 16%);
     margin: 0 0 1rem;
     position: relative;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    overflow-y: hidden;
 }
 
 .faq-section h1 {
